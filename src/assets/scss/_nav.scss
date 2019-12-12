@@ -1,0 +1,42 @@
+.nav {
+  background-color: $f;
+  padding: 20px 0;
+
+  img {
+    width: 130px;
+  }
+
+  .flex {
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 15px;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $b;
+        transition: $transition;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
