@@ -63,13 +63,13 @@ html(lang="en")
           .flex-1.right
             ul
               li
-                a(href="#!") Services
+                a(href="#services") Services
               li
-                a(href="#!") Team
+                a(href="#team") Team
               li
-                a(href="#!") Blog
+                a(href="#blog") Blog
               li
-                a(href="#!") Contact
+                a(href="#contact") Contact
 
     main.index
 
@@ -79,73 +79,116 @@ html(lang="en")
           p.white Business Consulting for Industry 4.0
           a.button.white(href="#!") Contact Us
 
-      section.index-how.center
+      section.index-how.center#services
         .container
-          h2 How Can We Help?
+          h2.uppercase How Can We Help?
           .flex.flex-wrap
             .flex-1
-              img(src="assets/img/consulting.png", alt="consulting")
-              h3 Consulting
-              p Is your organisation finding it difficult to navigate through the current uncertain times? We work with enterprises helping them navigate and come out a winner through these VUCA times.
+              svg.index-how__hex(viewBox='0 0 120 100')
+                path(d='M38,2 L82,2 A12,12 0 0,1 94,10 L112,44 A12,12 0 0,1 112,56 L94,90 A12,12 0 0,1 82,98 L38,98 A12,12 0 0,1 26,90 L8,56 A12,12 0 0,1 8,44 L26,10 A12,12 0 0,1 38,2')
+              .index-how__content
+                .flex
+                  div
+                    img(src="assets/img/consulting.png", alt="consulting")
+                    h3 Consulting
+                  .left
+                    ul
+                      li Agile Coaching
+                      li Management 4.0
+                      li Engineering Practices
             .flex-1
-              img(src="assets/img/software-dev.png", alt="software development")
-              h3 Software Development
-              p Software is changing how businesses are run at every level. We can help build the software that’s right for your requirements.
+              svg.index-how__hex(viewBox='0 0 120 100')
+                path(d='M38,2 L82,2 A12,12 0 0,1 94,10 L112,44 A12,12 0 0,1 112,56 L94,90 A12,12 0 0,1 82,98 L38,98 A12,12 0 0,1 26,90 L8,56 A12,12 0 0,1 8,44 L26,10 A12,12 0 0,1 38,2')
+              .index-how__content
+                .flex
+                  div
+                    img(src="assets/img/software-dev.png", alt="software development")
+                    h3 Software Engineering
+                  .left
+                    ul
+                      li Web Development
+                      li Mobile Development
+                      li BPM
+                      li DevOps &amp; Business Intelligence
             .flex-1
-              img(src="assets/img/training.png", alt="training")
-              h3 Training
-              p Training on various software practices for the complete workforce. Right from the junior developers on how to use GIT well to experienced software architects on Object-Oriented Programming and DevOps.
+              svg.index-how__hex(viewBox='0 0 120 100')
+                path(d='M38,2 L82,2 A12,12 0 0,1 94,10 L112,44 A12,12 0 0,1 112,56 L94,90 A12,12 0 0,1 82,98 L38,98 A12,12 0 0,1 26,90 L8,56 A12,12 0 0,1 8,44 L26,10 A12,12 0 0,1 38,2')
+              .index-how__content
+                .flex
+                  div
+                    img(src="assets/img/training.png", alt="training")
+                    h3 Training
+                  .left
+                    ul
+                      li Git Masterclass
+                      li OO for Experienced Professionals
+                      li Agile Project Management
 
       section.index-clients.center
         .container
-          h2 Our Clients
+          h2.uppercase Our Clients
           .flex.flex-wrap.justify-content-center.align-items-center
             .flex-1
-              img(src="assets/img/siemens-logo.png", alt="siemens logo")
+              img(src="assets/img/siemens-logo.png", alt="siemens logo", style="width: 180px; max-height: unset;")
             .flex-1
-              img(src="assets/img/trusting-social-logo.png", alt="trusting social logo")
+              img(src="assets/img/trusting-social-logo.png", alt="trusting social logo" style="width: 190px;")
             .flex-1
               img(src="assets/img/learning-health-logo.png", alt="learning health logo")
             .flex-1
               img(src="assets/img/tata-communications-logo.png", alt="tata communications logo")
             .flex-1
-              img(src="assets/img/shibika-logo.png", alt="shibika logo")
+              img(src="assets/img/shibika-logo.png", alt="shibika logo" style="width: 120px;max-height: unset;")
 
-      section.index-team.center
+      section.index-blog#blog
         .container
-          h2 Our Team
+          h2.center.uppercase Blog
           .flex
+            .flex-1
+              img(src="assets/img/blog-featured-image.jpg", alt="The Guessing Game of Abstractions")
+              h3.uppercase The Guessing Game of Abstractions
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus amet dolores distinctio ducimus cumque delectus sunt vero nobis qui iure! Ipsum, voluptate hic! Quis eveniet eaque voluptate soluta! Unde, beatae!
+            .flex-1
+              img(src="assets/img/blog-featured-image.jpg", alt="The Guessing Game of Abstractions")
+              h3.uppercase The Guessing Game of Abstractions
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus amet dolores distinctio ducimus cumque delectus sunt vero nobis qui iure! Ipsum, voluptate hic! Quis eveniet eaque voluptate soluta! Unde, beatae!
+            .flex-1
+              img(src="assets/img/blog-featured-image.jpg", alt="The Guessing Game of Abstractions")
+              h3.uppercase The Guessing Game of Abstractions
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus amet dolores distinctio ducimus cumque delectus sunt vero nobis qui iure! Ipsum, voluptate hic! Quis eveniet eaque voluptate soluta! Unde, beatae!
+
+      section.index-about.center#team
+        .container
+          h2.uppercase About Us
+          h3.index-about--subhead Our Values
+          .flex.index-about__values
+            .flex-1
+              img(src="assets/img/agility.png", alt="agility")
+              h3 Agility
+              p We firmly believe and follow the Agile methodology as a practice which promotes continuous iteration of development and testing throughout the software development lifecycle of the project.
+            .flex-1
+              img(src="assets/img/excellence.png", alt="engineering excellence")
+              h3 Engineering Excellence
+              p Exceptional engineers build exceptional software. We strive for excellence in everything we do.
+            .flex-1
+              img(src="assets/img/entrepreneur.png", alt="entrepreneurship")
+              h3 Entrepreneurship
+              p Entrepreneurship is a mindset and we value that. The hunger to grow, the will to keep trying and the passion to succeed is what keeps us going.
+          h3.index-about--subhead Our Team
+          .flex.index-about__team
             .flex-1
               img(src="assets/img/jayram-joshi.png", alt="jayram joshi")
               h3 Jayram Joshi
               h4 CEO
-              p With over 20 years of work experience, Jayram has worked with some of the leading brands in varying roles across domains. His journey started as a project manager and evolved to roles like that of Cheif Technical Officer, Head of Product Development who grew to become a Leadership Coach, Mentor and now the Founder. A Technologist and Entrepreneur at heart, Jayram is always curious to learn and grow.
+              p Over 20 years of work experience| Technologist and Agileist| Entrepreneur at Heart| Always curious to learn and grow.
             .flex-1
               img(src="assets/img/shripad-agashe.png", alt="shripad agashe")
               h3 Shripad Agashe
               h4 CTO
-              p With over 17 years of development experience in building enterprise-scale software, Shripad is an expert in TDD with a special interest in Performance and Scalability of compute-intensive enterprise applications. “Been there, done that.” is the perfect phrase to define Shripad’s technical expertise which has evolved from a System Engineer to a Senior Technical Architect. Even though the sceptical one in the team, Shripad too is ever-curious about the latest the tech market has to offer.
+              p Over 17 years of development experience| An expert in TDD| Ever Sceptical| Ever-curious about the latest the tech market has to offer.
 
-      section.index-blog
+      section.index-contact#contact
         .container
-          h2.center Blog
-          .flex
-            .flex-1
-              img(src="assets/img/blog-featured-image.jpg", alt="The Guessing Game of Abstractions")
-              h3.uppercase The Guessing Game of Abstractions
-              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus amet dolores distinctio ducimus cumque delectus sunt vero nobis qui iure! Ipsum, voluptate hic! Quis eveniet eaque voluptate soluta! Unde, beatae!
-            .flex-1
-              img(src="assets/img/blog-featured-image.jpg", alt="The Guessing Game of Abstractions")
-              h3.uppercase The Guessing Game of Abstractions
-              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus amet dolores distinctio ducimus cumque delectus sunt vero nobis qui iure! Ipsum, voluptate hic! Quis eveniet eaque voluptate soluta! Unde, beatae!
-            .flex-1
-              img(src="assets/img/blog-featured-image.jpg", alt="The Guessing Game of Abstractions")
-              h3.uppercase The Guessing Game of Abstractions
-              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus amet dolores distinctio ducimus cumque delectus sunt vero nobis qui iure! Ipsum, voluptate hic! Quis eveniet eaque voluptate soluta! Unde, beatae!
-
-      section.index-contact
-        .container
-          h2.center Contact Us
+          h2.center.uppercase Contact Us
           .index-contact__wrapper
             form
               input(type="text", placeholder="Name")

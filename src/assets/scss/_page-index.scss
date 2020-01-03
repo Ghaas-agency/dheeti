@@ -1,5 +1,6 @@
 .index {
   &-hero {
+    background-color: $light;
     padding: 250px 0;
     background-image: url('../img/dheeti-hero-bg.jpg');
     background-repeat: no-repeat;
@@ -15,12 +16,32 @@
       margin-bottom: 50px;
       font-size: 1.2em;
     }
+
+    @media only screen and (max-width: 767px) {
+      background-image: url('../img/dheeti-hero-bg-mobile.jpg');
+      padding: 150px 0;
+
+      h1 {
+        font-size: 2.4em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
   }
 
   &-how {
-    .flex {
-      margin: 0 -50px;
+    background-color: $light;
+    padding-top: 90px;
+
+    & > .container > .flex {
+      margin: 0;
       padding-top: 25px;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin: 0 -10px;
 
       @media only screen and (max-width: 767px) {
         flex-direction: column;
@@ -28,11 +49,11 @@
       }
 
       .flex-1 {
-        margin: 10px 50px;
-
-        @media only screen and (max-width: 767px) {
-          margin: 10px 10px 35px;
-        }
+        position: relative;
+        margin: 20px 30px;
+        max-width: 426px;
+        min-width: 326px;
+        height: 218px;
 
         img {
           height: 90px;
@@ -41,12 +62,89 @@
         h3 {
           margin-top: 15px;
         }
+        
+        @media only screen and (max-width: 767px) {
+          margin: 10px 10px 35px;
+        }
+
+        @media only screen and (max-width: 480px) {
+          img {
+            height: 75px;
+          }
+
+          h3 {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+
+    &__hex {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: calc(50% - 232px);
+      height: 246px;
+      transform: translateY(-50%);
+
+      path {
+        fill: none;
+        stroke: $blue;
+      }
+    }
+
+    &__content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      border-radius: 15px;
+      margin: 0 -10px;
+      background-image: url('../img/bihex.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      & > .flex {
+        position: relative;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
+        height: 100%;
+        padding: 0 20px;
+
+        & > div {
+          &:first-child {
+            flex: 1;
+          }
+          
+          &:last-child {
+            flex: 2;
+            min-width: 160px;
+          }
+        }
+      }
+
+      h3 {
+        line-height: 1.4;
+      }
+
+      ul {
+        li {
+          line-height: 1.4;
+
+          @media only screen and (max-width: 480px) {
+            font-size: 0.9em;
+          }
+        }
       }
     }
   }
 
   &-clients {
-    background-color: $light;
+    padding-top: 85px;
+    padding-bottom: 65px;
 
     .flex {
       @media only screen and (max-width: 767px) {
@@ -70,8 +168,17 @@
     }
   }
 
-  &-team {
-    .flex {
+  &-about {
+    padding-top: 85px;
+    padding-bottom: 90px;
+
+    &--subhead {
+      font-weight: normal;
+      font-size: 1.7em;
+      margin-top: 50px;
+    }
+
+    &__values {
       margin: 0 -20px;
 
       @media only screen and (max-width: 767px) {
@@ -84,6 +191,46 @@
         padding: 30px 50px;
         box-shadow: $shadow;
         border-radius: 5px;
+
+        img {
+          height: 110px;
+        }
+
+        h3 {
+          margin: 15px 0;
+        }
+
+        h4 {
+          opacity: 0.7;
+          margin-top: 5px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 0.95em;
+        }
+      }
+    }
+
+    &__team {
+      max-width: 900px;
+      margin: 0 auto;
+
+      @media only screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .flex-1 {
+        margin: 10px 0;
+        padding: 30px 50px;
+
+        &:first-child {
+          border-right: 1px solid rgba($b, 0.2);
+
+          @media only screen and (max-width: 767px) {
+            border-right: 0;
+          }
+        }
 
         img {
           height: 140px;
@@ -104,6 +251,8 @@
   }
 
   &-blog {
+    padding-top: 85px;
+    padding-bottom: 85px;
     background-color: $light;
 
     .flex {
@@ -125,12 +274,16 @@
   }
 
   &-contact {
+    background-color: $light;
+    padding-top: 85px;
+
     &__wrapper {
       max-width: 700px;
       margin: 0 auto;
       box-shadow: $shadow;
       border-radius: 5px;
       padding: 30px 40px;
+      background-color: $f;
     }
   }
 }
