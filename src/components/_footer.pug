@@ -1,0 +1,20 @@
+mixin footer(pathPrfix)
+  footer.footer
+    .container
+      .flex
+        .flex-1
+          img(src=`${pathPrfix}assets/img/dheeti-logo.svg`, alt="dheeti logo")
+          p &copy; Dheeti Technologies. All Rights Reserved.
+          p
+            a(href="#!") Privacy Policy
+            span  | 
+            a(href="#!") Terms of Use
+        .flex-1
+          ul.footer-list
+            li Bhawani Complex, Shastri Nagar Kothrud Pune,
+              br
+              | Maharashtra India 411038
+            li
+              a(href="tel:+91 779-898-7105") +91 779-898-7105
+            li
+              a(href="mailto:info@dheeti.com") info@dheeti.com
